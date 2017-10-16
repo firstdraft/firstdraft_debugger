@@ -9,7 +9,22 @@ module FirstdraftDebugger
       @ip = request.ip
       @app.call(env)
     rescue Exception => ex
-      [200, {"Content-Type" => "text/html"}, [error_message]]
+      if pass_through?
+        @app.call(env)
+      else
+        [200, {"Content-Type" => "text/html"}, [error_message]]
+      end
+    end
+
+
+    def pass_through?
+      path = Rails.root.join('whitelist.yml')
+      if File.exist?(path)
+        whitelisted_ips = YAML.load_file(path)
+        whitelisted_ips.include?(@ip)
+      else
+        false
+      end
     end
 
     def error_message
