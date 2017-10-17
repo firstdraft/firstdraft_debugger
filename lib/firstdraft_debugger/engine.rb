@@ -8,6 +8,12 @@ module FirstdraftDebugger
       end
     end
 
+    initializer 'firstdraft_debugger.action_controller' do |app|
+      ActiveSupport.on_load :action_controller do
+        helper FirstdraftDebugger::DebugHelper
+      end
+    end
+
     config.after_initialize do
       path = Rails.root.join('whitelist.yml')
       if File.exist?(path)

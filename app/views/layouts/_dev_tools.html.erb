@@ -1,0 +1,22 @@
+<div class="dev_toolbar">
+  <% if defined?(BetterErrors) %>
+    <%= link_to "Git", "/git", class: "dev_tools_button btn btn-outline-secondary" %>
+  <% end %>
+
+  <% if defined?(WebConsole) %>
+    <% console %>
+
+    <%= link_to "Console", "#", id: "console_button", class: "dev_tools_button btn btn-outline-secondary" %>
+
+    <script>
+      $( document ).ready(function() {
+        $("#console").hide();
+
+        $("#console_button").on("click", function() {
+          $("#console").toggle();
+          return false;
+        });
+      });
+    </script>
+  <% end %>
+</div>
