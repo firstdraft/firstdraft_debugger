@@ -1,7 +1,7 @@
 module FirstdraftDebugger
   class Middleware
     def initialize(app)
-      @app      = app
+      @app = app
     end
 
     def call(env)
@@ -23,7 +23,7 @@ module FirstdraftDebugger
         whitelisted_ips = YAML.load_file(path)
         whitelisted_ips.include?(@ip)
       else
-        false
+        true
       end
     end
 
