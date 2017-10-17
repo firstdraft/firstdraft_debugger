@@ -18,4 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 5.1.2"
 
+  s.add_dependency "better_errors"
+  s.add_dependency "web-console"
+
 end
