@@ -12,7 +12,6 @@ module FirstdraftDebugger
       path = Rails.root.join('whitelist.yml')
       if File.exist?(path)
         whitelisted_ips = YAML.load_file(path)
-        Rails.application.config.web_console.whitelisted_ips = whitelisted_ips
         whitelisted_ips.each do |ip|
           BetterErrors::Middleware.allow_ip!(ip)
         end
