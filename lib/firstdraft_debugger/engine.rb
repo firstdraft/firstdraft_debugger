@@ -8,6 +8,17 @@ module FirstdraftDebugger
       end
     end
 
+    config.after_initialize do
+      path = Rails.root.join('whitelist.yml')
+      if File.exist?(path)
+        whitelisted_ips = YAML.load_file(path)
+        Rails.application.config.web_console.whitelisted_ips = whitelisted_ips
+        whitelisted_ips.each do |ip|
+          BetterErrors::Middleware.allow_ip!(ip)
+        end
+      end
+    end
+
     def insert_middleware
       if defined? BetterErrors::Middleware
         app.middleware.insert_after BetterErrors::Middleware, FirstdraftDebugger::Middleware

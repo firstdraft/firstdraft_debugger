@@ -16,7 +16,6 @@ module FirstdraftDebugger
       end
     end
 
-
     def pass_through?
       path = Rails.root.join('whitelist.yml')
       if File.exist?(path)
