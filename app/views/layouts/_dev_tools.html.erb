@@ -20,4 +20,7 @@
       });
     </script>
   <% end %>
+  <% if defined?(ActiveAdmin) %>
+    <%= link_to "Admin", "/admin", class: "dev_tools_button btn btn-outline-secondary" %>
+  <% end %>
 </div>
