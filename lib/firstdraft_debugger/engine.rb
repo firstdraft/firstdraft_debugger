@@ -8,6 +8,11 @@ module FirstdraftDebugger
       end
     end
 
+    initializer "firstdraft_debugger.assets" do |app|
+      Rails.application.config.assets.precompile += %w{ dev_toolbar }
+      Rails.application.config.assets.paths << root.join("app", "assets", "stylesheets", "firstdraft_debugger")
+    end
+
     initializer 'firstdraft_debugger.action_controller' do |app|
       ActiveSupport.on_load :action_controller do
         helper FirstdraftDebugger::DebugHelper
