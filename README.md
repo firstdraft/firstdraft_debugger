@@ -1,5 +1,5 @@
 # DevToolbar
-Firstdraft debugger for cloud9 integration with better errors and web-console.
+Firstdraft Dev Toolbar for cloud9 integration with better errors and web-console..etc..,
 
 ## Installation
 Add this line to your application's Gemfile:

@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["murugan@firstdraft.com"]
   s.homepage    = "https://github.com/firstdraft"
   s.summary     = "Debug helper"
-  s.description = "Firstdraft Debug Helper"
+  s.description = "Firstdraft Dev Toolbar"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
