@@ -1,3 +1,3 @@
-module FirstdraftDebugger
+module DevToolbar
   VERSION = '0.1.0'
 end

@@ -1,4 +1,4 @@
-module FirstdraftDebugger
+module DevToolbar
   class Middleware
     def initialize(app)
       @app = app

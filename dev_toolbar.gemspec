@@ -1,14 +1,14 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "firstdraft_debugger/version"
+require "dev_toolbar/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "firstdraft_debugger"
-  s.version     = FirstdraftDebugger::VERSION
+  s.name        = "dev_toolbar"
+  s.version     = DevToolbar::VERSION
   s.authors     = ["Murugan"]
-  s.email       = ["murugu2012@gmail.com"]
+  s.email       = ["murugan@firstdraft.com"]
   s.homepage    = "https://github.com/firstdraft"
   s.summary     = "Debug helper"
   s.description = "Firstdraft Debug Helper"

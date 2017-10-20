@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :firstdraft_debugger do
+# task :dev_toolbar do
 #   # Task goes here
 # end

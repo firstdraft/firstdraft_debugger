@@ -1,9 +1,9 @@
-module FirstdraftDebugger
+module DevToolbar
   module DebugHelper
 
     def dev_tools
       if Rails.env.development?
-        render "layouts/dev_tools"
+        render "shared/dev_tools"
       end
     end
   end

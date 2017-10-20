@@ -1,2 +1,2 @@
-FirstdraftDebugger::Engine.routes.draw do
+DevToolbar::Engine.routes.draw do
 end
