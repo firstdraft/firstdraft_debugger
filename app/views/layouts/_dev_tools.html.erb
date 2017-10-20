@@ -7,16 +7,25 @@
   <% if defined?(WebConsole) %>
     <% console %>
 
+
     <%= link_to "Console", "#", id: "console_button", class: "dev_tools_button btn btn-outline-secondary" %>
 
     <script>
       $( document ).ready(function() {
-        $("#console").hide();
+        if($("#console").length != 0) {
+          $("#console").hide();
+        }
 
         $("#console_button").on("click", function() {
-          $("#console").toggle();
-          return false;
+          if($("#console").length == 0) {
+            $(".footer").toggle();
+            return false;
+          } else {
+            $("#console").toggle();
+            return false;
+          }
         });
+
       });
     </script>
   <% end %>
@@ -25,3 +34,8 @@
   <% end %>
   <%= link_to "Routes", "/rails/info", class: "dev_tools_button btn btn-outline-secondary" %>
 </div>
+
+<div class="footer alert-info" style="display: none;">Uh oh! Something went wrong. If you are the application owner, to get a more helpful error page please run this command at a terminal prompt: `bin/whitelist <%= request.ip %>`</div>
+
+
+ 
