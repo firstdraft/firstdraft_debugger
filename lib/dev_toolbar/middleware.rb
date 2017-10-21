@@ -27,11 +27,11 @@ module DevToolbar
     end
 
     def error_message
-  %Q{Uh oh! Something went wrong.
+  %Q{<p>Uh oh! You've got an error.</p>
 
- If you are the application owner, to get a more helpful error page please run this command at a terminal prompt:
+ <p>If you are the application owner, to get a more helpful error page please run this command at a terminal prompt:</p>
 
- `bin/whitelist #{@ip}`}
+ <pre><code>bin/whitelist #{@ip}</code></pre>}
     end
   end
 end
