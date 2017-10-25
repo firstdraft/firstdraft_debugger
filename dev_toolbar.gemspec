@@ -19,6 +19,5 @@ Gem::Specification.new do |s|
   s.add_dependency "rails"
 
   s.add_dependency "better_errors"
-  s.add_dependency "web-console"
 
 end

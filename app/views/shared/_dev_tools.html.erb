@@ -4,35 +4,8 @@
     <%= link_to "Git", "/git", class: "dev_tools_button btn btn-outline-secondary" %>
   <% end %>
 
-  <% if defined?(WebConsole) %>
-    <% console %>
-
-
-    <%= link_to "Console", "#", id: "console_button", class: "dev_tools_button btn btn-outline-secondary" %>
-
-    <script>
-      $( document ).ready(function() {
-        if($("#console").length != 0) {
-          $("#console").hide();
-        }
-
-        $("#console_button").on("click", function() {
-          if($("#console").length == 0) {
-            $(".footer").toggle();
-            return false;
-          } else {
-            $("#console").toggle();
-            return false;
-          }
-        });
-
-      });
-    </script>
-  <% end %>
   <% if defined?(ActiveAdmin) %>
     <%= link_to "Admin", "/admin", class: "dev_tools_button btn btn-outline-secondary" %>
   <% end %>
   <%= link_to "Routes", "/rails/info", class: "dev_tools_button btn btn-outline-secondary" %>
 </div>
-
-<div class="footer alert-info" style="display: none;">Uh oh! Something went wrong. If you are the application owner, to get a more helpful error page please run this command at a terminal prompt: `bin/whitelist <%= request.ip %>`</div>
